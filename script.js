@@ -10,8 +10,6 @@ function start() {
         money = +prompt ("Ваш бюджет на месяц?", "");
     }
 }
-
-start();
    
 let appData = {
     budget: money,
@@ -39,15 +37,10 @@ function choseExpenses() {
     }
 }
 
-choseExpenses();
-
 function detectDayBudjet() {
     appData.moneyPerDay = (appData.budget / 30).toFixed();
     alert ("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
 }
-
-detectDayBudjet();
-
 
 function detectLevel() {
     if (appData.moneyPerDay < 100) {
@@ -61,7 +54,6 @@ function detectLevel() {
     }
 }
 
-
 function checkSavings() {
     if (appData.savings == true) {
         let save = +prompt("Какова сумма накоплений?"),
@@ -72,4 +64,7 @@ function checkSavings() {
     }
 }
 
+start();
+choseExpenses();
+detectDayBudjet();
 checkSavings();
