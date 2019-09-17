@@ -41,21 +41,26 @@ function choseExpenses() {
 
 choseExpenses();
 
-appData.moneyPerDay = (appData.budget / 30).toFixed();
-
-
-alert ("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
-
-
-if (appData.moneyPerDay < 100) {
-    console.log ("Это минимальный уровень достатка!");
-} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-    console.log ("Это средний уровень достатка!");
-} else if (appData.moneyPerDay > 2000) {
-    console.log ("Это высокий уровень достатка!");
-} else {
-    console.log ("Произошла ошибка");
+function detectDayBudjet() {
+    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert ("Бюджет на 1 день составляет " + appData.moneyPerDay + "руб.");
 }
+
+detectDayBudjet();
+
+
+function detectLevel() {
+    if (appData.moneyPerDay < 100) {
+        console.log ("Это минимальный уровень достатка!");
+    } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+        console.log ("Это средний уровень достатка!");
+    } else if (appData.moneyPerDay > 2000) {
+        console.log ("Это высокий уровень достатка!");
+    } else {
+        console.log ("Произошла ошибка");
+    }
+}
+
 
 function checkSavings() {
     if (appData.savings == true) {
