@@ -64,6 +64,13 @@ function checkSavings() {
     }
 }
 
+function chooseOptExpenses() {
+    for (let i = 0; i < 3; i++) {
+        let ask = prompt("Статья необязательных расходов?", "");
+        appData.optionalExpenses[i] = ask;
+    }
+}
+
 start();
 choseExpenses();
 detectDayBudjet();
