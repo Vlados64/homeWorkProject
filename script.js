@@ -75,3 +75,4 @@ start();
 choseExpenses();
 detectDayBudjet();
 checkSavings();
+chooseOptExpenses();
